@@ -1,4 +1,4 @@
-'''Ori Weis'''
+''' Ori Weis '''
 '''29.4.21'''
 '''This Bank Class Will Be The Server'''
 '''Interpeter 3.8'''
