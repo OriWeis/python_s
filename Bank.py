@@ -1,4 +1,4 @@
-''' Ori Weis '''
+'''Ori Weis'''
 '''29.4.21'''
 '''This Bank Class Will Be The Server'''
 '''Interpeter 3.8'''
@@ -68,8 +68,8 @@ Enter the code of the action you would like to execute:
 4 = exit\n
 The code: '''
     server_socket=socket.socket()
-    server_socket.bind(('0.0.0.0',1801))
-    server_socket.listen(5)
+    server_socket.bind(('0.0.0.0',1801))#Opens Server
+    server_socket.listen(5)#Listens To Client
     (client_socket, client_address) = server_socket.accept()
     print("Client has entered")
     print("All of the bank accounts:\n"
@@ -96,7 +96,7 @@ The code: '''
                 credentials = my_bank.check_credentials(acc, pin_code)
                 print(credentials)
                 client_socket.send(bytes((str(credentials)).encode('utf-8')))
-                if credentials == True:
+                if credentials == True:#if you sent credentials that are in the bank
                     while action != '4':
                         client_socket.send(bytes((msg).encode('utf-8')))
                         action = client_socket.recv(1024).decode()
@@ -113,8 +113,9 @@ The code: '''
                             else:
                                 client_socket.send(bytes((msg).encode('utf-8')))
                         elif action == '3':
+                            #Checks Balance
                             client_socket.send(bytes(my_bank.check_balance(acc).encode('utf-8')))
-                        elif action=='4':
+                        elif action=='4':#exit
                             print("Goodbye!")
                             break
                         else:
