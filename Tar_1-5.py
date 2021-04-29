@@ -1,5 +1,5 @@
 '''Ori Weis'''
-29.4.21
+#29.4.21
 from numpy import *
 import math
 def ret_sum(A):
