@@ -24,7 +24,7 @@ def fib(n):
 
 def main():
     print("fibo: ", fib(10))
-    print("Cached Results: ", fib)  # all factorials from 1 to 5 are cached
+    print("Cached Results: ", fib)  # all factorials from 1 to 10 are cached
     print("fibo: ", fib(5))
     print("Cached Results: ", fib)
 
