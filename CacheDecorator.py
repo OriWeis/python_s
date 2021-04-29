@@ -1,5 +1,6 @@
 '''Targil 6'''
-
+'''Ori Weis'''
+#29.4.21
 class memorize(dict):
 
     """ Constructor """
